@@ -1,0 +1,8 @@
+node_modules/
+uploads/
+work/
+POD_ZIPS.zip
+.env
+.env.local
+*.log
+.DS_Store
