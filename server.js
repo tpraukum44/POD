@@ -288,7 +288,7 @@ function getCourierLogo(courier) {
 function buildHTML(row) {
   const courierLogo = getCourierLogo(row.courier);
   const watermark =
-    getLocalImageDataUrl("watermark.png") || "https://www.rocketrybox.com/images/track-order.png";
+    getLocalImageDataUrl("watermark.png") || "";
 
   return `
 <html>
