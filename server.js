@@ -153,9 +153,9 @@ app.post("/upload", upload.single("excel"), async (req, res) => {
       let page;
       try {
         page = await browserInstance.newPage();
-        await page.setJavaScriptEnabled(false);
+        await page.setJavaScriptEnabled(true);
         await page.setContent(buildHTML(task.row), {
-          waitUntil: "domcontentloaded",
+          waitUntil: "networkidle0",
           timeout: PDF_TIMEOUT_MS
         });
         await new Promise((r) => setTimeout(r, 150));
